@@ -15,9 +15,10 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text(selectedCity ?? "")
-                    .foregroundStyle(.blue)
+                Text(selectedCity!)
+                Text(viewModel.condition)
             }
+            .foregroundStyle(.black)
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(backgroundColor.gradient)
@@ -25,6 +26,9 @@ struct ContentView: View {
             .onAppear {
                 if selectedCity == nil {
                     selectedCity = "New York"
+                }
+                Task {
+                    await viewModel.fetchData(for: City.getCity(for: selectedCity!)!)
                 }
             }
         }

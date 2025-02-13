@@ -7,9 +7,8 @@
 
 import Foundation
 
-final class WeatherManager : ObservableObject {
-    var shared = WeatherManager()
-    
+final class WeatherManager {
+    static let shared = WeatherManager()
     init() {}
     
     func getPrettyCondition(for condition: String) -> String {
