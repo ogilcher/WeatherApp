@@ -19,41 +19,41 @@ struct Location : Codable {
     let country: String
     let lat: Double
     let lon: Double
-    let tz_id: String
-    let localtime_epoch: Int
+    let tzId: String
+    let localtimeEpoch: Int
     let localtime: String
 }
 
 struct CurrentWeather : Codable {
-    let last_updated_epoch: Int
-    let last_updated: String
-    let temp_c: Double
-    let temp_f: Double
-    let is_day: Int
+    let lastUpdatedEpoch: Int
+    let lastUpdated: String
+    let tempC: Double
+    let tempF: Double
+    let isDay: Int
     let condition: Condition
-    let wind_mph: Double
-    let wind_kph: Double
-    let wind_degree: Int
-    let wind_dir: String
-    let pressure_mb: Double
-    let pressure_in: Double
-    let precip_mm: Double
-    let precip_in: Double
+    let windMph: Double
+    let windKph: Double
+    let windDegree: Int
+    let windDir: String
+    let pressureMb: Double
+    let pressureIn: Double
+    let precipMm: Double
+    let precipIn: Double
     let humidity: Int
     let cloud: Int
-    let feelslike_c: Double
-    let feelslike_f: Double
-    let windchill_c: Double
-    let windchill_f: Double
-    let headindex_c: Double
-    let headindex_f: Double
-    let dewpoint_c: Double
-    let dewpoint_f: Double
-    let vis_km: Double
-    let vis_miles: Double
+    let feelslikeC: Double
+    let feelslikeF: Double
+    let windchillC: Double
+    let windchillF: Double
+    let headindexC: Double
+    let headindexF: Double
+    let dewpointC: Double
+    let dewpointF: Double
+    let visKm: Double
+    let visMiles: Double
     let uv: Double
-    let gust_mph: Double
-    let gust_kph: Double
+    let gustMph: Double
+    let gustKph: Double
 }
 
 struct Condition: Codable {
