@@ -13,8 +13,7 @@ class WeatherViewModel : ObservableObject {
     @Published var isLoading = true
     @Published var condition = ""
     @Published var temperature = 0.0
-    
-    let apiKey = "ff3305f26d894469a6e04215251302"
+    let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String ?? "API KEY FETCH FAILED"
     
     func fetchData(for city: City) async {
         guard let downloadedWeather: [Weather] = await WebManager().downloadData(
