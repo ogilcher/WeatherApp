@@ -7,13 +7,12 @@
 
 import Foundation
 
-struct Weather : Codable, Identifiable {
-    var id: UUID = UUID()
-    let location : Location
+struct Weather : Codable {
+    let location : WeatherLocation
     let current : CurrentWeather
 }
 
-struct Location : Codable {
+struct WeatherLocation : Codable {
     let name: String
     let region: String
     let country: String
@@ -45,8 +44,8 @@ struct CurrentWeather : Codable {
     let feelslikeF: Double
     let windchillC: Double
     let windchillF: Double
-    let headindexC: Double
-    let headindexF: Double
+    let heatindexC: Double
+    let heatindexF: Double
     let dewpointC: Double
     let dewpointF: Double
     let visKm: Double

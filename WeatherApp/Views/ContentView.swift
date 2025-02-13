@@ -24,9 +24,10 @@ struct ContentView: View {
             .background(backgroundColor.gradient)
             
             .onAppear {
-                if selectedCity == nil {
-                    selectedCity = "New York"
-                }
+                selectedCity = "San Francisco"
+//                if selectedCity == nil {
+//                    selectedCity = "San Francisco"
+//                }
                 Task {
                     await viewModel.fetchData(for: City.getCity(for: selectedCity!)!)
                 }
