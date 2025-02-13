@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct WeatherAppApp: App {
@@ -13,5 +14,8 @@ struct WeatherAppApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(
+            for: City.self
+        )
     }
 }
