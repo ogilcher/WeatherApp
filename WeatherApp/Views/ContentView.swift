@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = WeatherViewModel()
     @State private var backgroundColor : Color = .white
     @AppStorage("selectedCity") private var selectedCity : String?
     
