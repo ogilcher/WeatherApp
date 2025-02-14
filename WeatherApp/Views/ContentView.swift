@@ -28,6 +28,8 @@ struct ContentView: View {
                 viewModel.image
                     .font(.system(size: 150))
                     .foregroundStyle(.white)
+                    .skeleton(Circle(),
+                        isLoading: viewModel.isLoading)
                     
                 
                 VStack (spacing: 5) {
@@ -35,10 +37,12 @@ struct ContentView: View {
                         .foregroundStyle(.cobaltBlue.opacity(0.4))
                         .font(.system(size: 25, weight: .semibold))
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .skeleton(Rectangle(), isLoading: viewModel.isLoading)
                     Text("\(viewModel.temperature)°")
                         .foregroundStyle(.cobaltBlue)
                         .font(.system(size: 50, weight: .bold))
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .skeleton(Rectangle(), isLoading: viewModel.isLoading)
                 }
                 
             }
